@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//add textScaleFactor
+
 class Welcome extends StatefulWidget {
   @override
   _WelcomeState createState() => _WelcomeState();

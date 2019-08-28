@@ -11,6 +11,7 @@ class _SigninState extends State<Signin> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+    double tScale = 0.8+(MediaQuery.of(context).textScaleFactor)/4.5;
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -25,12 +26,13 @@ class _SigninState extends State<Signin> {
             children: <Widget>[
               Container(
                   margin: EdgeInsets.only(bottom: height*0.1,top: height*0.1),
-                  width: width*0.45,
-                  height: width*0.45,
+                  width: height*0.25,
+                  height: height*0.25,
                   child: Image.asset("images/welcome.png")
               ),
               Container(
                 width: width*0.8,
+                height: height*0.1,
                 margin: EdgeInsets.only(bottom: height*0.01),
                 child: TextFormField(
                   autocorrect: false,
@@ -51,6 +53,7 @@ class _SigninState extends State<Signin> {
               ),
               Container(
                 width: width*0.8,
+                height: height*0.1,
                 margin: EdgeInsets.only(bottom: height*0.02),
                 child: TextFormField(
                   style: TextStyle(fontSize: width*0.05),
@@ -66,6 +69,8 @@ class _SigninState extends State<Signin> {
                 ),
               ),
               Container(
+                  height: height*0.03,
+                  //width: width*0.9,
                   margin: EdgeInsets.only(bottom: height*0.05),
                   padding: EdgeInsets.only(left: width*0.53),
                   child: InkWell(
@@ -74,7 +79,8 @@ class _SigninState extends State<Signin> {
                       style: TextStyle(
                           color: Color.fromRGBO(237, 28, 36, 1),
                           fontSize: width*0.04,
-                      )
+                      ),
+                        textScaleFactor: tScale
                     ),
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
@@ -83,15 +89,17 @@ class _SigninState extends State<Signin> {
               ),
               Container(
                 padding: EdgeInsets.all(0),
+                margin: EdgeInsets.only(bottom: height*0.07),
                 width: width*0.8,
-                height: height*0.067,
+                height: height*0.07,
                 child: RaisedButton(
                   child: Text(
                     "Login",
                     style: TextStyle(
                         fontSize: width*0.08,
                         color: Colors.white,
-                    )
+                    ),
+                      textScaleFactor: tScale
                   ),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                   color: Color.fromRGBO(237, 28, 36, 1),
@@ -104,16 +112,15 @@ class _SigninState extends State<Signin> {
               ),
               Center(
                 child: Container(
-                    //width: width*0.6,
-                    margin: EdgeInsets.only(top: height*0.12,bottom: height*0.02),
+                    height: height*0.1,
                     child: Center(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text("Don't you have an account? ", style: TextStyle(fontSize: width*0.04)),
+                          Text("Don't you have an account? ", style: TextStyle(fontSize: width*0.04),textScaleFactor: tScale),
                           Container(
                               child: InkWell(
-                                child: Text("Sign up",style: TextStyle(color: Color.fromRGBO(237, 28, 36, 1),fontSize: width*0.04),),
+                                child: Text("Sign up",style: TextStyle(color: Color.fromRGBO(237, 28, 36, 1),fontSize: width*0.04),textScaleFactor: tScale),
                                 onTap: (){},
                               )
                           ),
