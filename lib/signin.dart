@@ -11,7 +11,7 @@ class _SigninState extends State<Signin> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    double tScale = 0.8+(MediaQuery.of(context).textScaleFactor)/4.5;
+    double tScale = 0.65+(MediaQuery.of(context).textScaleFactor)/4.5;
 
     return Scaffold(
       body: SingleChildScrollView(

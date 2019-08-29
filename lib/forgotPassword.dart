@@ -10,7 +10,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    double tScale = 0.8+(MediaQuery.of(context).textScaleFactor)/4.5;
+    double tScale = 0.65+(MediaQuery.of(context).textScaleFactor)/4.5;
 
     return Scaffold(
       body: Container(
@@ -60,7 +60,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                           child: Text("Forgot password?",style: TextStyle(fontSize: width*0.1,color: Color.fromRGBO(237, 28, 36, 1)),textScaleFactor: tScale,),
                         ),
                         Container(
-                          width: width*0.7,
+                          width: width*0.75,
                           height: height*0.11,
                           margin: EdgeInsets.only(top: height*0.00),
                           child: Text(

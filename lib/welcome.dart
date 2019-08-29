@@ -13,6 +13,8 @@ class _WelcomeState extends State<Welcome> {
 
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+    double tScale = 0.65+(MediaQuery.of(context).textScaleFactor)/4.5;
+
     return Container(
       width: width,
       height: height,
@@ -37,6 +39,7 @@ class _WelcomeState extends State<Welcome> {
                   fontFamily: 'Samsung',
                   decoration: TextDecoration.none
               ),
+              textScaleFactor: tScale
             ),
           ),
           Container(
@@ -49,7 +52,8 @@ class _WelcomeState extends State<Welcome> {
                   fontWeight: FontWeight.w100,
                   color: Color.fromRGBO(237, 28, 36, 0.9),
                   decoration: TextDecoration.none
-              )
+              ),
+                textScaleFactor: tScale
             ),
           ),
 
