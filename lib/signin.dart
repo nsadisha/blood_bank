@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:blood_bank/forgotPassword.dart';
+import 'package:blood_bank/signup.dart';
 
 class Signin extends StatefulWidget {
   @override
@@ -33,10 +34,9 @@ class _SigninState extends State<Signin> {
               Container(
                 width: width*0.8,
                 height: height*0.1,
-                margin: EdgeInsets.only(bottom: height*0.01),
                 child: TextFormField(
                   autocorrect: false,
-                  style: TextStyle(fontSize: width*0.05),
+                  //style: TextStyle(fontSize: width*0.05),
                   textInputAction: TextInputAction.done,
                   validator: (value){
                     if(value.isEmpty){
@@ -47,6 +47,7 @@ class _SigninState extends State<Signin> {
                     prefixIcon: Icon(Icons.supervised_user_circle),
                     hintText: "Username",
                     labelText: "Username",
+                    contentPadding: EdgeInsets.all(width*0.05),
                     border:OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
                   ),
                 ),
@@ -56,7 +57,7 @@ class _SigninState extends State<Signin> {
                 height: height*0.1,
                 margin: EdgeInsets.only(bottom: height*0.02),
                 child: TextFormField(
-                  style: TextStyle(fontSize: width*0.05),
+                  //style: TextStyle(fontSize: width*0.05),
                   obscureText: true,
                   autocorrect: false,
                   textInputAction: TextInputAction.done,
@@ -64,6 +65,7 @@ class _SigninState extends State<Signin> {
                       prefixIcon: Icon(Icons.lock),
                       hintText: "Password",
                       labelText: "Password",
+                      contentPadding: EdgeInsets.all(width*0.05),
                       border:OutlineInputBorder(borderRadius: BorderRadius.circular(5))
                   ),
                 ),
@@ -89,7 +91,7 @@ class _SigninState extends State<Signin> {
               ),
               Container(
                 padding: EdgeInsets.all(0),
-                margin: EdgeInsets.only(bottom: height*0.07),
+                margin: EdgeInsets.only(bottom: height*0.08),
                 width: width*0.8,
                 height: height*0.07,
                 child: RaisedButton(
@@ -121,7 +123,9 @@ class _SigninState extends State<Signin> {
                           Container(
                               child: InkWell(
                                 child: Text("Sign up",style: TextStyle(color: Color.fromRGBO(237, 28, 36, 1),fontSize: width*0.04),textScaleFactor: tScale),
-                                onTap: (){},
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+                                },
                               )
                           ),
                         ],

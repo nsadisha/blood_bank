@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:blood_bank/signup.dart';
 
 class ForgotPassword extends StatefulWidget {
   @override
@@ -76,10 +77,11 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                           child: TextFormField(
                             autofocus: true,
                             keyboardType: TextInputType.emailAddress,
-                            style: TextStyle(fontSize: width*0.05),
+                            //style: TextStyle(fontSize: width*0.05),
                             decoration: InputDecoration(
                                 labelText: "Email",
                                 hintText: "Email",
+                                contentPadding: EdgeInsets.all(width*0.06),
                                 prefixIcon: Icon(Icons.email),
                                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(5))
                             ),
@@ -111,7 +113,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                                     Container(
                                         child: InkWell(
                                           child: Text("Sign up",style: TextStyle(color: Color.fromRGBO(237, 28, 36, 1),fontSize: width*0.04),textScaleFactor: tScale),
-                                          onTap: (){},
+                                          onTap: (){
+                                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+                                          },
                                         )
                                     ),
                                   ],
