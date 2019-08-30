@@ -314,7 +314,7 @@ class _SignupState extends State<Signup> {
                           padding: EdgeInsets.all(0),
                           margin: EdgeInsets.only(bottom: 5.0),
                           width: width*0.9,
-                          height: height*0.24,
+                          //height: height*0.24,
                           alignment: Alignment.topCenter,
                           child: TextFormField(
                             keyboardType: TextInputType.multiline,
