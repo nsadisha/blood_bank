@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-//import 'package:blood_bank/forgotPassword.dart';
-import 'package:blood_bank/signin.dart';
-//import 'package:blood_bank/welcome.dart';
-//import 'package:blood_bank/signup.dart';
+//import 'package:blood_bank/Screens/forgotPassword.dart';
+import 'package:blood_bank/Screens/signin.dart';
+//import 'package:blood_bank/Screens/welcome.dart';
+//import 'package:blood_bank/Screens/signup.dart';
 
 void main() {
   runApp(MyApp());
