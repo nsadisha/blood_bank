@@ -10,16 +10,25 @@ void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent, statusBarIconBrightness: Brightness.dark));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  Brightness _brightness;
+
   @override
   Widget build(BuildContext context) {
+    _brightness = Brightness.light;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Blood Bank',
       theme: ThemeData(
         //primarySwatch: Colors.red,
         fontFamily: 'Samsung',
-        brightness: Brightness.light,
+        brightness: _brightness,
         primaryColor: Color.fromRGBO(237, 28, 36, 1),
         cursorColor: Color.fromRGBO(237, 28, 36, 1),
         accentColor: Color.fromRGBO(237, 28, 36, 1),

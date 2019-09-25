@@ -40,6 +40,12 @@ class Notifications extends StatelessWidget {
                 subtitle: Text("Hello this is a text"),
               ),
             ),
+            Card(
+              child: ListTile(
+                title: Text("Test 3"),
+                subtitle: Text("Hello this is a text"),
+              ),
+            ),
           ],
         )
       ),
