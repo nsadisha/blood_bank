@@ -33,6 +33,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
         body: _children[_currentIndex], // new
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.shifting,
           selectedItemColor: Colors.red,
           backgroundColor: Colors.white,
           unselectedItemColor: Colors.grey,
