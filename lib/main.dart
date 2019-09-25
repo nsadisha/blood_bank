@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 //import 'package:blood_bank/Screens/forgotPassword.dart';
-import 'package:blood_bank/Screens/signin.dart';
+import 'package:blood_bank/Screens/Signed/home.dart';
 //import 'package:blood_bank/Screens/welcome.dart';
 //import 'package:blood_bank/Screens/signup.dart';
 
@@ -17,10 +17,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Blood Bank',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        //primarySwatch: Colors.red,
         fontFamily: 'Samsung',
+        brightness: Brightness.light,
         primaryColor: Color.fromRGBO(237, 28, 36, 1),
         cursorColor: Color.fromRGBO(237, 28, 36, 1),
+        accentColor: Color.fromRGBO(237, 28, 36, 1),
       ),
       home: App(),
     );
@@ -36,6 +38,6 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
 
-    return Signin();
+    return Home();
   }
 }

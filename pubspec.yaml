@@ -71,6 +71,10 @@ flutter:
       fonts:
         - asset: fonts/Note.ttf
 
+#    - family: MyFlutterApp
+#      fonts:
+#        - asset: fonts/Icons.ttf
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
