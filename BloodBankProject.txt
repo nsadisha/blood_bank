@@ -1,0 +1,48 @@
+internet connection is required to start the app.
+
+
+Login screen
+    signin-
+        username
+        password
+    signup-
+        full name
+        NIC number
+        address
+        DOB
+        sex
+        blood group
+        weight
+        height
+        email
+        contact number
+        DP[optional]
+    forgot password-
+        get code via emial
+        get code via phone number
+
+
+welcome screen
+    welcome text
+    some animation
+
+
+user information screen
+    qr-
+        unique QR code for each user
+    user-
+        user info
+        diseases
+        last donation info
+
+
+notification screen
+    notifications-
+    nearby blood donation camps-
+        show location with google maps
+
+
+blood donation score-
+    acording to number of donations, we can count points.
+    we can call this Life Points.
+

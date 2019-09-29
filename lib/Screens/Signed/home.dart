@@ -15,6 +15,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   int _currentIndex = 0;
+
+  //Navigation bar pages
   final List<Widget> _children = [
     HomePage(),
     Notifications(),
@@ -31,7 +33,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: _children[_currentIndex], // new
+        body: _children[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.shifting,
           selectedItemColor: Colors.red,
