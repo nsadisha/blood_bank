@@ -16,6 +16,14 @@ class _HomeState extends State<Home> {
 
   int _currentIndex = 0;
 
+  //App Bar titles for different pages.
+  final List<String> _appBarTitles = [
+    'Home',
+    'Notifications',
+    'Account',
+    'Settings'
+  ];
+
   //Navigation bar pages
   final List<Widget> _children = [
     HomePage(),
@@ -32,7 +40,21 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double tScale = 0.65+(MediaQuery.of(context).textScaleFactor)/4.5;
     return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            _appBarTitles[_currentIndex],
+            textScaleFactor: tScale,
+            style: TextStyle(
+                fontSize: width*0.08,
+                color: Color.fromRGBO(237, 28, 36, 1)
+            ),
+          ),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
         body: _children[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.shifting,

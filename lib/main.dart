@@ -6,18 +6,18 @@ import 'package:blood_bank/Screens/Signed/home.dart';
 //import 'package:blood_bank/Screens/signup.dart';
 
 void main() {
+  //setting status bar icon brightness to dark
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+      )
+  );
+
   //Setting the orientation to portrait.
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_){
     runApp(MyApp());
   });
-
-  //setting status bar icon brightness to dark
-  SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-          statusBarIconBrightness: Brightness.dark,
-      )
-  );
 }
 
 class MyApp extends StatefulWidget {
@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    _brightness = Brightness.dark;
+    _brightness = Brightness.light;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Blood Bank',
