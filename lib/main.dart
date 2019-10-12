@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 //import 'package:blood_bank/Screens/forgotPassword.dart';
 import 'package:blood_bank/Screens/Signed/home.dart';
 //import 'package:blood_bank/Screens/welcome.dart';
-//import 'package:blood_bank/Screens/signup.dart';
+//import 'package:blood_bank/Screens/signup.dart'
 
 void main() {
   //setting status bar icon brightness to dark

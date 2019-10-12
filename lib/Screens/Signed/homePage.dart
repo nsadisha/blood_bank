@@ -7,6 +7,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -19,11 +20,12 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Card(color: Colors.grey,child: Container(
-            width: width*0.9,
-            height: height*0.07,
-            child: Text("Hello"),
-          ),),
+          Card(
+            color: Colors.grey.withOpacity(0.2),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+            elevation: 0,
+            child: Container(width: width*0.9,height: height*0.25,),
+          ),
         ],
       ),
 
